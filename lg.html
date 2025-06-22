@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof. Legesse Adane Bahiru | Organic Chemistry Pioneer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a3a6e;
+            --secondary-color: #e67e22;
+            --accent-color: #2ecc71;
+            --light-color: #f9f9f9;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #777;
+            --bg-color: #ffffff;
+            --card-bg: #ffffff;
+            --header-bg: rgba(255,255,255,0.95);
+            --footer-bg: #2c3e50;
+            --glass-effect: rgba(255,255,255,0.1);
+            --glass-border: rgba(255,255,255,0.2);
+            --glass-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            --transition-all: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #4a89dc;
+            --secondary-color: #e67e22;
+            --accent-color: #2ecc71;
+            --light-color: #121212;
+            --dark-color: #1a1a1a;
+            --text-color: #f0f0f0;
+            --text-light: #b0b0b0;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --header-bg: rgba(30,30,30,0.95);
+            --footer-bg: #1a1a1a;
+            --glass-effect: rgba(30,30,30,0.3);
+            --glass-border: rgba(255,255,255,0.05);
+            --glass-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+            transition: background-color 0.5s ease;
+        }
+
+        /* Cosmic Background Animation */
+        .cosmic-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            overflow: hidden;
+        }
+
+        .cosmic-particle {
+            position: absolute;
+            background: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+        }
+
+        /* Ultra Responsive Layout */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: var(--primary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 15px auto 0;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+        }
+
+        /* Futuristic Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+            transition: var(--transition-all);
+        }
+
+        header.scrolled {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        .logo {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+
+        /* Holographic Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            padding: 5px 0;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            transition: var(--transition-all);
+        }
+
+        nav ul li a::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition-all);
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--text-color);
+            z-index: 1001;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.3rem;
+            cursor: pointer;
+            margin-left: 20px;
+            transition: var(--transition-all);
+        }
+
+        .theme-toggle:hover {
+            transform: rotate(30deg) scale(1.1);
+        }
+
+        /* Quantum Hero Section */
+        .hero {
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(26, 58, 110, 0.8) 0%, rgba(26, 58, 110, 0.9) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: quantumEntrance 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes quantumEntrance {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #ffffff, #e6f7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .hero h2 {
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            margin-bottom: 30px;
+            font-weight: 300;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+        }
+
+        .hero-btns {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Holographic Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--secondary-color);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: var(--transition-all);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.7s;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(230, 126, 34, 0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* About Section with Parallax */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-all);
+        }
+
+        .about-content.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition-all);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 40px;
+        }
+
+        .about-text h3 {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .about-details {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .detail-item i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+
+        .detail-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .detail-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Personal Info - Glass Morphism */
+        .personal-info {
+            background: linear-gradient(135deg, var(--light-color) 0%, #eef2f5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .personal-info::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230,126,34,0.1) 0%, transparent 70%);
+            animation: rotate 30s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .info-card {
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--glass-shadow);
+            transition: var(--transition-all);
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .info-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .info-card h3 i {
+            color: var(--secondary-color);
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .info-item i {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+
+        .info-item p {
+            flex: 1;
+        }
+
+        .info-item strong {
+            color: var(--primary-color);
+        }
+
+        /* Education Timeline - 3D Effect */
+        .education-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(230,126,34,0.05)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-all);
+            perspective: 1000px;
+        }
+
+        .timeline-item.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: var(--card-bg);
+            border: 4px solid var(--secondary-color);
+            border-radius: 50%;
+            top: 20px;
+            z-index: 1;
+            transform: translateZ(20px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .left {
+            left: 0;
+            transform-origin: left center;
+        }
+
+        .right {
+            left: 50%;
+            transform-origin: right center;
+        }
+
+        .left::after {
+            right: -12px;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: var(--transition-all);
+            transform-style: preserve-3d;
+        }
+
+        .timeline-item:hover .timeline-content {
+            transform: translateZ(20px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .timeline-content p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+
+        .timeline-date {
+            font-weight: 600;
+            color: var(--secondary-color);
+            display: inline-block;
+            margin-bottom: 15px;
+            background: rgba(230,126,34,0.1);
+            padding: 5px 15px;
+            border-radius: 50px;
+        }
+
+        /* Research Grid - Interactive Cards */
+        .research-section {
+            position: relative;
+        }
+
+        .research-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, var(--bg-color), transparent);
+            z-index: -1;
+        }
+
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            padding: 10px 25px;
+            border-radius: 50px;
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            cursor: pointer;
+            transition: var(--transition-all);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .research-item {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: var(--transition-all);
+            text-align: center;
+            border-bottom: 4px solid transparent;
+            opacity: 0;
+            transform: translateY(30px) rotateX(20deg);
+            transform-style: preserve-3d;
+        }
+
+        .research-item.animate {
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+
+        .research-item:hover {
+            transform: translateY(-10px) rotateX(0) scale(1.03) !important;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            border-bottom-color: var(--secondary-color);
+        }
+
+        .research-item i {
+            font-size: 3.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 25px;
+            background: rgba(230, 126, 34, 0.1);
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-all);
+        }
+
+        .research-item:hover i {
+            transform: rotateY(180deg);
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .research-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: var(--transition-all);
+        }
+
+        .research-item:hover h3 {
+            color: var(--secondary-color);
+        }
+
+        .research-item p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        /* Publications - Interactive List */
+        .publication-list {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .publication-item {
+            background: var(--card-bg);
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: var(--transition-all);
+            border-left: 4px solid var(--secondary-color);
+            opacity: 0;
+            transform: translateX(-30px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .publication-item.animate {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .publication-item:hover {
+            transform: translateX(10px) translateY(-5px) !important;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .publication-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .publication-meta {
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 0.9rem;
+        }
+
+        .publication-meta span {
+            display: flex;
+            align-items: center;
+        }
+
+        .publication-meta i {
+            margin-right: 5px;
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+        }
+
+        .publication-abstract {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .publication-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 15px;
+        }
+
+        .publication-actions .btn {
+            padding: 8px 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section - Interactive Form */
+        .contact-section {
+            background: linear-gradient(135deg, #1a3a6e 0%, #0d2342 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.03)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .contact-section .section-title h2 {
+            color: white;
+            background: linear-gradient(90deg, white, #e6f7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-section .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-all);
+        }
+
+        .contact-info.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: white;
+        }
+
+        .contact-detail {
+            display: flex;
+            margin-bottom: 25px;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .contact-detail i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 5px;
+        }
+
+        .contact-detail-content h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .contact-detail-content p {
+            opacity: 0.8;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition-all);
+        }
+
+        .contact-form.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition-all);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.2);
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Floating Action Button */
+        .fab {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 20px rgba(230, 126, 34, 0.4);
+            cursor: pointer;
+            z-index: 999;
+            transition: var(--transition-all);
+            opacity: 0;
+            transform: translateY(100px);
+        }
+
+        .fab.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fab:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 30px rgba(230, 126, 34, 0.6);
+        }
+
+        /* Footer with Particle Effect */
+        footer {
+            background: var(--footer-bg);
+            color: white;
+            text-align: center;
+            padding: 80px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.03)" d="M0,0 L100,0 L100,100 L0,100 Z"></path></svg>');
+            background-size: cover;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+            background: linear-gradient(90deg, white, #e6f7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-content p {
+            opacity: 0.8;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: var(--transition-all);
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(230, 126, 34, 0.4);
+        }
+
+        .social-links a:hover::before {
+            left: 100%;
+        }
+
+        .copyright {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Loading Animation */
+        .loader {
+            display: none;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top: 4px solid var(--secondary-color);
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: rgba(46, 204, 113, 0.2);
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design - Quantum Breakpoints */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1000px;
+            }
+            
+            .section {
+                padding: 100px 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                max-width: 800px;
+            }
+            
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            .left::after, .right::after {
+                left: 21px;
+            }
+            
+            .right {
+                left: 0%;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-img {
+                order: -1;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background: var(--header-bg);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                transition: var(--transition-all);
+                z-index: 1000;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.2);
+            }
+            
+            nav ul.active {
+                right: 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero {
+                padding-top: 80px;
+                min-height: auto;
+                height: auto;
+                padding-bottom: 80px;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .contact-info, .contact-form {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .about-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .publication-actions {
+                flex-direction: column;
+            }
+            
+            .fab {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        /* Ultra HD and 4K Screens */
+        @media (min-width: 2000px) {
+            html {
+                font-size: 20px;
+            }
+            
+            .container {
+                max-width: 1800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Cosmic Background Animation -->
+    <div class="cosmic-bg" id="cosmicBg"></div>
+
+    <!-- Floating Action Button -->
+    <div class="fab" id="fab" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Futuristic Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://www.hu.edu.et/images/huimages/professor/Screenshot_20240209_164043_Gmail.jpg" alt="legesse adane" style="margin: 15px; width: 70px; height: 50px; border-radius: 50%;">
+                Legesse <span>Adane</span>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#personal" class="nav-link">Personal</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Quantum Hero Section -->
+    <section id="home" class="hero" style="margin-top:100px ;">
+        <div class="container hero-content">
+            <h1>Prof. Legesse Adane Bahiru</h1>
+            <h2>Professor of Organic Chemistry at Hawassa University</h2>
+            <p>Specializing in medicinal chemistry, phytochemistry, and drug design with over 20 years of academic experience and research contributions in organic chemistry and pharmaceutical sciences.</p>
+            <div class="hero-btns">
+                <a href="#about" class="btn">
+                    <i class="fas fa-user-graduate"></i> Explore My Work
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i class="fas fa-paper-plane"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Parallax -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Get to know my professional background and academic journey</p>
+            </div>
+            <div class="about-content" id="aboutContent">
+                <div class="about-img">
+                    <img src="https://www.hu.edu.et/images/huimages/professor/Screenshot_20240209_164043_Gmail.jpg" alt="Prof. Legesse Adane Bahiru">
+                </div>
+                <div class="about-text">
+                    <h3>Professor of Organic Chemistry</h3>
+                    <p>I am a dedicated academic professional with extensive experience in organic chemistry and pharmaceutical sciences. Currently serving as a Full Professor at Hawassa University, I have committed my career to advancing chemical knowledge and its applications in drug discovery and development.</p>
+                    <p>My research focuses on computer-aided drug design, phytochemical investigation of medicinal plants, and development of environmentally friendly chemical processes.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Education</h4>
+                                <p>Ph.D. in Pharmaceutical Chemistry, NIPER, India (2011)</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Experience</h4>
+                                <p>20+ years teaching and research experience</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-university"></i>
+                            <div>
+                                <h4>Affiliation</h4>
+                                <p>Department of Chemistry, Hawassa University</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn" id="downloadCV">
+                        <i class="fas fa-download"></i> Download Full CV
+                    </button>
+                    <div class="loader" id="cvLoader"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Info with Glass Morphism -->
+    <section id="personal" class="section personal-info">
+        <div class="container">
+            <div class="section-title">
+                <h2>Personal Information</h2>
+                <p>My background and professional details</p>
+            </div>
+            <div class="info-grid">
+                <div class="info-card" id="infoCard1">
+                    <h3><i class="fas fa-user"></i>Basic Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <p><strong>Date of Birth:</strong> 30 August, 1971</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p><strong>Place of Birth:</strong> Sodo Dugda, Gurage zone, SNNPR, Ethiopia</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-heart"></i>
+                        <p><strong>Marital Status:</strong> Married</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-child"></i>
+                        <p><strong>Children:</strong> 3</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-praying-hands"></i>
+                        <p><strong>Religion:</strong> Christian</p>
+                    </div>
+                </div>
+                
+                <div class="info-card" id="infoCard2">
+                    <h3><i class="fas fa-id-card"></i>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><strong>Email:</strong> adanelegesse@gmail.com, adanelegesse@yahoo.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p><strong>Mobile:</strong> +251-916395678</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-building"></i>
+                        <p><strong>Address:</strong> Department of Chemistry, College of Natural and Computational Sciences, Hawassa University, Ethiopia</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-id-badge"></i>
+                        <p><strong>ORCID ID:</strong> <a href="https://orcid.org/0000-0001-5153-6946" target="_blank">0000-0001-5153-6946</a></p>
+                    </div>
+                </div>
+                
+                <div class="info-card" id="infoCard3">
+                    <h3><i class="fas fa-award"></i>Academic Ranks</h3>
+                    <div class="info-item">
+                        <i class="fas fa-star"></i>
+                        <p><strong>Full Professor:</strong> Since 5 February, 2020 (Hawassa University)</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-star-half-alt"></i>
+                        <p><strong>Associate Professor:</strong> Since October 2015 (Hawassa University)</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-star-half-alt"></i>
+                        <p><strong>Associate Professor:</strong> November 2014 - October 2015 (Jimma University)</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p><strong>Assistant Professor:</strong> Feb 2011 - Nov 2014 (Jimma University)</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <p><strong>Lecturer:</strong> September 1999 - Jan 2011 (Jimma University)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Timeline with 3D Effect -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Education</h2>
+                <p>My academic qualifications and training</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item left" id="timeline1">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2011</span>
+                        <h3>Ph.D. in Pharmaceutical Chemistry</h3>
+                        <p><strong>National Institute of Pharmaceutical Education and Research (NIPER), Punjab, India</strong></p>
+                        <p>Title: Computer-Aided Design and Synthesis of Potential Antimalarial Agents: Targeting P. falciparum DHFR Enzymes</p>
+                        <p>Supervisors: Prof. P.V. Bharatam and Prof. A. K. Chakraborti</p>
+                    </div>
+                </div>
+                <div class="timeline-item right" id="timeline2">
+                    <div class="timeline-content">
+                        <span class="timeline-date">February 2000</span>
+                        <h3>M.Sc. in Organic Chemistry</h3>
+                        <p><strong>Addis Ababa University, Ethiopia</strong></p>
+                        <p>Title: Extraction and characterization of New Bianthraquinones from the stem barks of S. dedimobtyra and S. floribunda</p>
+                        <p>Supervisor: Prof. Gizachew Alemayehu</p>
+                    </div>
+                </div>
+                <div class="timeline-item left" id="timeline3">
+                    <div class="timeline-content">
+                        <span class="timeline-date">November 1993</span>
+                        <h3>B.Sc. in Chemistry</h3>
+                        <p><strong>Addis Ababa University, Ethiopia</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item right" id="timeline4">
+                    <div class="timeline-content">
+                        <span class="timeline-date">1982-1988</span>
+                        <h3>Secondary Education</h3>
+                        <p><strong>Alaba Special Wereda, Alaba Senior Secondary School</strong></p>
+                    </div>
+                </div>
+                <div class="timeline-item left" id="timeline5">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2013</span>
+                        <h3>Postdoctoral Experience</h3>
+                        <p><strong>CV Raman Fellowship at NIPER, Punjab, India</strong></p>
+                        <p>Project: Design and synthesis of nitrogen-containing heterocycles as anti-TB agents</p>
+                        <p>Host professor: Professor A.K. Chakraborti</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Grid with Interactive Cards -->
+    <section id="research" class="section research-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Research Focus Areas</h2>
+                <p>My primary research interests and specialized domains</p>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Research</button>
+                <button class="filter-btn" data-filter="drug-design">Drug Design</button>
+                <button class="filter-btn" data-filter="phytochemistry">Phytochemistry</button>
+                <button class="filter-btn" data-filter="green-chem">Green Chemistry</button>
+            </div>
+            <div class="research-grid">
+                <div class="research-item" data-category="drug-design">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Computer-Aided Drug Design</h3>
+                    <p>Development of computational models for designing potential inhibitors of enzymes like P. falciparum DHFR for antimalarial applications.</p>
+                    <button class="btn research-detail-btn">Explore Research</button>
+                </div>
+                <div class="research-item" data-category="phytochemistry">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Phytochemistry</h3>
+                    <p>Isolation and characterization of bioactive compounds from Ethiopian medicinal plants with potential therapeutic applications.</p>
+                    <button class="btn research-detail-btn">Explore Research</button>
+                </div>
+                <div class="research-item" data-category="drug-design">
+                    <i class="fas fa-flask"></i>
+                    <h3>Medicinal Chemistry</h3>
+                    <p>Synthesis and evaluation of nitrogen-containing heterocycles as potential anti-TB and antimalarial agents.</p>
+                    <button class="btn research-detail-btn">Explore Research</button>
+                </div>
+                <div class="research-item" data-category="green-chem">
+                    <i class="fas fa-recycle"></i>
+                    <h3>Green Chemistry</h3>
+                    <p>Development of environmentally friendly chemical processes including soap production from waste materials.</p>
+                    <button class="btn research-detail-btn">Explore Research</button>
+                </div>
+                <div class="research-item" data-category="phytochemistry">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Natural Products</h3>
+                    <p>Exploration of Ethiopian flora for biologically active compounds with medicinal properties.</p>
+                    <button class="btn research-detail-btn">Explore Research</button>
+                </div>
+                <div class="research-item" data-category="drug-design">
+                    <i class="fas fa-coffee"></i>
+                    <h3>Food Chemistry</h3>
+                    <p>Analysis of caffeine content in Ethiopian coffee varieties using advanced analytical techniques.</p>
+                    <button class="btn research-detail-btn">Explore Research</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications with Interactive List -->
+    <section id="publications" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Selected Publications</h2>
+                <p>A collection of my significant academic contributions</p>
+            </div>
+            <div class="publication-list">
+                <div class="publication-item" id="pub1">
+                    <h3>Computer-aided molecular design of 1H-Imidazole-2,4-diamine derivatives as potential inhibitors of PfDHFR enzyme</h3>
+                    <div class="publication-meta">
+                        <span><i class="fas fa-book"></i> Journal of Molecular Modeling</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2011</span>
+                        <span><i class="fas fa-volume"></i> 17:657-667</span>
+                    </div>
+                    <p class="publication-abstract">This paper presents novel computational approaches for designing potential antimalarial agents targeting the P. falciparum DHFR enzyme, showing significant improvement over traditional approaches.</p>
+                    <div class="publication-actions">
+                        <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Full Text</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-quote-right"></i> Cite</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item" id="pub2">
+                    <h3>Design and synthesis of guanylthiourea derivatives as potential inhibitors of Plasmodium falciparum Dihydrofolate Reductase enzyme</h3>
+                    <div class="publication-meta">
+                        <span><i class="fas fa-book"></i> Bioorganic & Medicinal Chemistry Letters</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2014</span>
+                        <span><i class="fas fa-volume"></i> 24:613-617</span>
+                    </div>
+                    <p class="publication-abstract">Exploring guanylthiourea derivatives as novel antimalarial agents with potential activity against P. falciparum DHFR enzyme.</p>
+                    <div class="publication-actions">
+                        <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Full Text</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-quote-right"></i> Cite</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item" id="pub3">
+                    <h3>Preparation of laundry soap from used cooking oils: getting value out waste</h3>
+                    <div class="publication-meta">
+                        <span><i class="fas fa-book"></i> Scientific Research and Essays</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2020</span>
+                        <span><i class="fas fa-volume"></i> 15:1-10</span>
+                    </div>
+                    <p class="publication-abstract">Development of an environmentally friendly approach to recycle used cooking oil into valuable laundry soap products.</p>
+                    <div class="publication-actions">
+                        <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Full Text</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-quote-right"></i> Cite</a>
+                    </div>
+                </div>
+                
+                <div class="publication-item" id="pub4">
+                    <h3>Exploring the potential of water hyacinth ash as substitute for commercial alkali for preparation of laundry soap</h3>
+                    <div class="publication-meta">
+                        <span><i class="fas fa-book"></i> Frontiers in Sustainability</span>
+                        <span><i class="fas fa-calendar-alt"></i> 2021</span>
+                        <span><i class="fas fa-volume"></i> 2:1-11</span>
+                    </div>
+                    <p class="publication-abstract">Innovative approach to utilize invasive water hyacinth as a source of alkali for soap production while controlling its environmental impact.</p>
+                    <div class="publication-actions">
+                        <a href="#" class="btn"><i class="fas fa-file-pdf"></i> Full Text</a>
+                        <a href="#" class="btn btn-outline"><i class="fas fa-quote-right"></i> Cite</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn"><i class="fas fa-book-open"></i> View All Publications</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Feel free to contact me for collaborations, research inquiries, or academic discussions</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info" id="contactInfo">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="contact-detail-content">
+                            <h4>Address</h4>
+                            <p>Department of Chemistry<br>College of Natural and Computational Sciences<br>Hawassa University<br>Hawassa, Ethiopia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div class="contact-detail-content">
+                            <h4>Email</h4>
+                            <p>adanelegesse@gmail.com<br>adanelegesse@yahoo.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div class="contact-detail-content">
+                            <h4>Phone</h4>
+                            <p>+251-916395678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-detail-content">
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 4:00 PM<br>By appointment</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" id="contactForm">
+                    <h3>Send Me a Message</h3>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        <div class="loader" id="formLoader"></div>
+                        <div class="success-message" id="formSuccess">
+                            <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Particle Effect -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Prof. Legesse Adane Bahiru</h3>
+                <p>Professor of Organic Chemistry at Hawassa University, dedicated to advancing chemical knowledge and its applications in drug discovery and environmental sustainability.</p>
+                
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/legesse-adane-bahiru" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a a href="https://t.me/+251916395678" target="_blank" title="telegram"><i class="fab fa-researchgate"></i></a>
+                    <a href="https://orcid.org/0000-0001-5153-6946" title="ORCID" target="_blank"><i class="fab fa-orcid"></i></a>
+                    <a href="mailto:adanelegesse@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" title="Google Scholar"><i class="fab fa-google-scholar"></i></a>
+                </div>
+                
+                <div class="copyright">
+                    &copy; <span id="year"></span> Legesse Adane Bahiru. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cosmic Background Animation
+        function createCosmicParticles() {
+            const cosmicBg = document.getElementById('cosmicBg');
+            const particleCount = Math.floor(window.innerWidth / 10);
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('cosmic-particle');
+                
+                // Random properties
+                const size = Math.random() * 3 + 1;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100;
+                const opacity = Math.random() * 0.8 + 0.2;
+                const delay = Math.random() * 15;
+                const duration = Math.random() * 10 + 10;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.opacity = opacity;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                cosmicBg.appendChild(particle);
+            }
+        }
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Dark Mode Toggle with LocalStorage
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark' || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme'))) {
+            body.setAttribute('data-theme', 'dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Update Copyright Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Research Filter System
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const researchItems = document.querySelectorAll('.research-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Filter research items
+                researchItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Research Detail Buttons
+        const researchDetailBtns = document.querySelectorAll('.research-detail-btn');
+        researchDetailBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const researchTitle = this.parentElement.querySelector('h3').textContent;
+                
+                // Create modal
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0,0,0,0.8)';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+                modal.style.zIndex = '10000';
+                modal.style.opacity = '0';
+                modal.style.transition = 'opacity 0.3s ease';
+                
+                // Modal content
+                modal.innerHTML = `
+                    <div style="background: var(--card-bg); padding: 30px; border-radius: 15px; max-width: 600px; width: 90%; position: relative;">
+                        <button style="position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-color);">&times;</button>
+                        <h3 style="color: var(--primary-color); margin-bottom: 20px;">${researchTitle}</h3>
+                        <p style="color: var(--text-light); margin-bottom: 20px;">Detailed information about this research area would be displayed here. This could include methodologies, findings, applications, and future directions.</p>
+                        <p style="color: var(--text-light);">For specific details about this research, please contact me directly or check my publications related to this topic.</p>
+                        <div style="margin-top: 30px;">
+                            <a href="#contact" class="btn" style="margin-right: 15px;">Contact Me</a>
+                            <a href="#publications" class="btn btn-outline">View Publications</a>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(modal);
+                
+                // Fade in
+                setTimeout(() => {
+                    modal.style.opacity = '1';
+                }, 10);
+                
+                // Close modal
+                modal.querySelector('button').addEventListener('click', () => {
+                    modal.style.opacity = '0';
+                    setTimeout(() => {
+                        document.body.removeChild(modal);
+                    }, 300);
+                });
+            });
+        });
+
+        // Form Submission with Loading State
+        const contactForm = document.getElementById('messageForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formLoader = document.getElementById('formLoader');
+        const formSuccess = document.getElementById('formSuccess');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                submitBtn.style.display = 'none';
+                formLoader.style.display = 'block';
+                
+                // Simulate form submission (replace with actual AJAX call)
+                setTimeout(() => {
+                    formLoader.style.display = 'none';
+                    formSuccess.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Reset after 5 seconds
+                    setTimeout(() => {
+                        formSuccess.style.display = 'none';
+                        submitBtn.style.display = 'inline-block';
+                    }, 5000);
+                }, 1500);
+            });
+        }
+
+        // CV Download Simulation
+        const downloadCV = document.getElementById('downloadCV');
+        const cvLoader = document.getElementById('cvLoader');
+        
+        if (downloadCV) {
+            downloadCV.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Show loading state
+                downloadCV.style.display = 'none';
+                cvLoader.style.display = 'block';
+                
+                // Simulate download (replace with actual file download)
+                setTimeout(() => {
+                    cvLoader.style.display = 'none';
+                    downloadCV.style.display = 'inline-block';
+                    
+                    // Create temporary link for download
+                    const link = document.createElement('a');
+                    link.href = '#'; // Replace with actual CV URL
+                    link.download = 'Legesse-Adane-CV.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }, 1500);
+            });
+        }
+
+        // Floating Action Button
+        const fab = document.getElementById('fab');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                fab.classList.add('visible');
+            } else {
+                fab.classList.remove('visible');
+            }
+        });
+        
+        fab.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements that should animate
+        document.querySelectorAll('.about-content, .info-card, .timeline-item, .research-item, .publication-item, .contact-info, .contact-form').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initialize cosmic background
+        createCosmicParticles();
+
+        // Responsive adjustments on resize
+        window.addEventListener('resize', () => {
+            // Recreate cosmic particles
+            const cosmicBg = document.getElementById('cosmicBg');
+            cosmicBg.innerHTML = '';
+            createCosmicParticles();
+        });
+    </script>
+</body>
+</html>
